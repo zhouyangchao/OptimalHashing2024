@@ -22,16 +22,20 @@ public:
     // 返回 key 对应的 hash 值（范围 [0, n-1]）
     int hash(const string& key) const;
     
-    // 封装操作，分别计算 h1 与 h2，用于对比验证
+    // 封装操作：分别计算 h1 与 h2，用于对比验证
     int computeH1(const string &key) const;
     int computeH2(const string &key) const;
     int encapsulatedHash(const string &key) const;
+    
+    // Get construction time in milliseconds
+    long long getConstructionTimeMs() const { return construction_time; }
     
 private:
     vector<string> keys;
     int n, m;
     vector<int> g;
     uint32_t seed1, seed2;
+    long long construction_time; // Add field to track construction time
     
     bool construct();
     static uint32_t computeHash(const string &key, uint32_t seed);

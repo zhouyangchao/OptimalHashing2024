@@ -1,5 +1,5 @@
 CXX = g++
-CXXFLAGS = -std=c++11 -O2 -Wall
+CXXFLAGS = -std=c++17 -O2 -Wall
 
 SRCS = main.cpp mph.cpp simple_hash.cpp elastic_hash.cpp funnel_hash.cpp
 OBJS = $(SRCS:.cpp=.o)

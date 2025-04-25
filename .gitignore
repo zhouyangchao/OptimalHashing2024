@@ -53,3 +53,6 @@ dkms.conf
 
 optimalhash
 .vscode
+*.png
+*.csv
+test_results.txt
